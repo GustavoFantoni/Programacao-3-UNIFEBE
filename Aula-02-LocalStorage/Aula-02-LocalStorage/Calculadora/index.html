@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <section class="area-calc">
+
+        <div class="area-history" id="history">
+            <ul id="list-history"></ul>
+        </div>
+
+        <div class="window-calc" id="window-calc">
+            <input class="characters" id="characters" type="text" name="equacao" id="inputEquacao">
+        </div>
+
+        <div class="area-btn">
+            
+            <button type="button" class="btn-calc" onclick="montaEquacao(7);" id="">7</button>
+            <button type="button" class="btn-calc" onclick="montaEquacao(8);" id="">8</button>
+            <button type="button" class="btn-calc" onclick="montaEquacao(9);" id="">9</button>
+            <button type="button" class="btn-calc" onclick="montaEquacao('DEL');" id="">DEL</button>
+            <button type="button" class="btn-calc" onclick="montaEquacao(4);" id="">4</button>
+            <button type="button" class="btn-calc" onclick="montaEquacao(5);" id="">5</button>
+            <button type="button" class="btn-calc" onclick="montaEquacao(6);" id="">6</button>
+            <button type="button" class="btn-calc" onclick="montaEquacao('+');" id="">+</button>
+            <button type="button" class="btn-calc" onclick="montaEquacao(1);" id="">1</button>
+            <button type="button" class="btn-calc" onclick="montaEquacao(2);" id="">2</button>
+            <button type="button" class="btn-calc" onclick="montaEquacao(3);" id="">3</button>
+            <button type="button" class="btn-calc" onclick="montaEquacao('-');" id="">-</button>
+            <button type="button" class="btn-calc" onclick="montaEquacao('.');" id="">.</button>
+            <button type="button" class="btn-calc" onclick="montaEquacao(0);" id="">0</button>
+            <button type="button" class="btn-calc" onclick="montaEquacao('/');" id="">÷</button>
+            <button type="button" class="btn-calc" onclick="montaEquacao('*');" id="">x</button>
+        </div>
+        <div class="bottom-calc">
+            <button type="button" class="btn-calc-bottom" onclick="montaEquacao('RESET');" id="">RESET</button>
+            <button type="button" class="btn-calc-bottom" onclick="montaEquacao('=');" id="">=</button>
+        </div>
+        
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

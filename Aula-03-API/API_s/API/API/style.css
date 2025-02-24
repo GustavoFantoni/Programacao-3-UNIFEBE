@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-image: url(images/noite.jpg);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+* {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+.card-previsao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:fit-content;
+    background-color: rgba(156, 156, 156, 0.342);
+    padding: 0 50px;
+    border-radius: 10px;
+}
+h1 {
+    margin: 0px;
+    color: rgb(255, 255, 255);
+}
+h3 {
+    margin: 0 0 10px 0;
+    color: rgb(255, 255, 255);
+}

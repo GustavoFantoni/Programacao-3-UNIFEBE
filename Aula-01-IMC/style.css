@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    background-color: rgb(59, 59, 59);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.area-content {
+    background-color: rgb(99, 99, 99);
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    border-radius: 20px;
+    padding: 15px 0;
+    box-shadow: 10px 10px 30px rgb(34, 34, 34);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+input {
+    all: unset;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+  }
+  
+label {
+    align-self: flex-start;
+    margin-left: 20px;
+    background-color: rgb(99, 99, 99);
+    position: relative;
+    top: 10px;
+    padding: 0 5px;
+    color: rgb(255, 255, 255);
+}
+#altura, #peso {
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    height: 40px;
+    width: 100%;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  color: rgb(59, 59, 59);
+}
+input[type="number"] {
+    padding-left: 10px;
+}
+input[type="submit"] {
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    text-align: center;
+    padding: 10px 0px;
+    margin: 20px 0;
+    border-radius: 20px;
+    color: rgb(99, 99, 99);
+    box-shadow: 5px 5px 30px rgb(59, 59, 59);
+    transition: 200ms;
+}
+input[type="submit"]:hover {
+    background-color: rgb(99, 99, 99);
+    color: rgb(255, 255, 255);
+    transition: 200ms;
+}
+
+.response-area {
+    border: 1px solid rgb(255, 255, 255);
+    margin-top: 20px;
+    padding: 0 15px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
