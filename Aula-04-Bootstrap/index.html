@@ -5,15 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clima</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
+
+
 </head>
 <body style="background-color: #d1e3ff;">
-
-    <!-- Área do mapa -->
+    
+   
     <div class="container text-center">
         <div class="row justify-content-center" id="conteudo">
+
+
+
+
+
+             <!-- Área do mapa -->
             <div class="col-lg-3 p-0 d-flex flex-column align-items-center justify-content-center" id="areaMapa" style="height: 600px; background-color: rgb(196, 196, 255);">
                 <div class="row flex-grow-1 w-100 d-flex align-items-center justify-content-center" style="height: calc(100% - 50px);">
                     <div id="map" style="width: 100%; height: 100%; box-shadow: 5px 0 10px -2px rgba(0, 0, 0, 0.192);"></div>
@@ -29,87 +38,121 @@
             </div>
             
             <!-- Área principal -->
-            <div class="col-lg-5" style="background-color: rgb(100, 198, 255);">
+             <!-- Área principal -->
+        <div class="col-lg-5" style="background-color: rgb(100, 198, 255);">
 
-                <div class="row d-flex justify-content-center align-items-center" style="height: 80px; background-color: rgb(100, 198, 255);">
-                    <p id="address" style="font-weight: 900; font-size: 30px; line-height: 30px; color: #fff; margin-top: 10px;"><span id="city"></span>, <span id="state"></span></p>
+            <!-- Cidade consultada -->
+            <div class="row d-flex justify-content-center align-items-center" style="height: 80px; background-color: rgb(100, 198, 255);">
+                <p id="address" style="font-weight: 900; font-size: 30px; line-height: 30px; color: #fff; margin-top: 10px;">
+                    <span id="city"></span>, <span id="state"></span>
+                </p>
+            </div>
+
+            <!-- Área informações -->
+            <div class="row d-flex align-items-stretch" style=" background-color: rgb(100, 198, 255);">
+                <hr>
+
+                <!-- Coluna da temperatura -->
+                <div class="col-lg-9 d-flex align-items-center flex-column" style="margin-bottom: 20px;" >
+                    <div class="row d-flex align-items-center">
+                        <div class="d-flex align-items-center">
+                            <p id="temperatura" style="font-size: 100px; font-weight: 600; color: #fff; margin: 0;"></p>
+                            <img src="" alt="icone clima" id="icone" style="width: 120px; height: auto; margin-left: 10px;">
+                        </div>
+                    </div>
+                    <div class="row" style="font-size: 12px;">
+                        <p id="sensacao" style="color: #fff; font-size: 20px"></p>
+                    </div>
                 </div>
-                
 
+                <!-- Informações adicionais -->
+                <div class="col-lg-3 d-flex flex-wrap justify-content-evenly justify-content-lg-start" style="color: rgb(217, 237, 248); margin-bottom: 20px;">
 
-                <div class="row d-flex align-items-stretch" style="max-height: 200px; background-color: rgb(100, 198, 255);">
-                    <hr>
-                
-                    <!-- Coluna da temperatura -->
-                    <div class="col-lg-9 d-flex flex-column" style="background-color: #090a3f;">
-                        <div class="row d-flex align-items-center">
-                            <div class="d-flex align-items-center">
-                                <p id="temperatura" style="font-size: 100px; font-weight: 600; color: #fff; margin: 0;"></p>
-                                <img src="" alt="icone clima" id="icone" style="width: 120px; height: auto; margin-left: 10px;">
+                    <div class="row col-lg-12 col-6 w-100 ">
+
+                        <div class="col-lg-12 col-6 d-flex">
+                            <div class="col-lg-6 col-3 d-flex justify-content-end" style="margin-right: 20px;">
+                                <i class="bi bi-speedometer2"></i>
+                            </div>
+                            <div class="col-lg-6 col-3  d-flex flex-column">
+                                <div class="row text-start"  style="font-size: 12px; line-height: 12px;">Pressão</div>
+                                <div class="row" id="pressao" style="font-weight: 600; color: #fff;"></div>
                             </div>
                         </div>
-                        <div class="row text-start">
-                            <p id="sensacao" style="color: #fff; font-size: 20px;"></p>
+                      
+
+                        <div class="col-lg-12 col-6 d-flex">
+                            <div class="col-lg-6 col-3 d-flex justify-content-end" style="margin-right: 20px;">
+                                <i class="bi bi-moisture"></i>
+                            </div>
+                            <div class="col-lg-6 col-3 d-flex flex-column">
+                                <div class="row text-start"  style="font-size: 12px; line-height: 12px;">Umidade</div>
+                                <div class="row" id="umidade" style="font-weight: 600; color: #fff;"></div>
+                            </div>
                         </div>
+
                     </div>
-                
-                    
-      
-                    <div class="col-lg-3 d-flex flex-wrap justify-content-between" style="background-color: #9bf6ff;">
-    
-                        <div class="col-6 col-lg-12 d-flex flex-column align-items-center flex-grow-1">
-                            <img src="" alt="">
-                            <p class="descricao fs-6 fs-lg-5">Pressão</p>
-                            <p class="valor fs-6 fs-lg-5"></p>
+
+
+                   <div class="row col-lg-12 col-6 w-100">
+
+                        <div class="col-lg-12 col-6 d-flex">
+                            <div class="col-lg-6 col-3 d-flex justify-content-end" style="margin-right: 20px;">
+                                <i class="bi bi-thermometer"></i>
+                            </div>
+                            <div class="col-lg-6 col-3  d-flex flex-column">
+                                <div class="row text-start"  style="font-size: 12px; line-height: 12px;">Temp. Mín</div>
+                                <div class="row" id="min" style="font-weight: 600; color: #fff;"></div>
+                            </div>
                         </div>
-                    
-                        <div class="col-6 col-lg-12 d-flex flex-column align-items-center flex-grow-1">
-                            <img src="" alt="">
-                            <p class="descricao fs-6 fs-lg-5">Umidade</p>
-                            <p class="valor fs-6 fs-lg-5"></p>
+                      
+
+                        <div class="col-lg-12 col-6 d-flex">
+                            <div class="col-lg-6 col-3 d-flex justify-content-end" style="margin-right: 20px;">
+                                <i class="bi bi-thermometer-high"></i>
+                            </div>
+                            <div class="col-lg-6 col-3 d-flex flex-column">
+                                <div class="row text-start"  style="font-size: 12px; line-height: 12px;">Temp. Máx</div>
+                                <div class="row" id="max" style="font-weight: 600; color: #fff;"></div>
+                            </div>
                         </div>
-                    
-                        <div class="col-6 col-lg-12 d-flex flex-column align-items-center flex-grow-1">
-                            <img src="" alt="">
-                            <p class="descricao fs-6 fs-lg-5">Temp. Máxima</p>
-                            <p class="valor fs-6 fs-lg-5"></p>
-                        </div>
-                    
-                        <div class="col-6 col-lg-12 d-flex flex-column align-items-center flex-grow-1">
-                            <img src="" alt="">
-                            <p class="descricao fs-6 fs-lg-5">Temp. Mínima</p>
-                            <p class="valor fs-6 fs-lg-5"></p>
-                        </div>
-                    
+
                     </div>
-                    
-                    
-        
-                    
-                    
+
+
+
+
+
+
                 </div>
-                
-                
-
-
-
-                <div class="row" style="height: 100px; background-color:rgb(100, 198, 255);"></div>
-
-
-
 
             </div>
 
-            <div class="col-lg-2 d-flex flex-column justify-content-around" style="background-color: rgb(179, 179, 179);">
-                <div class="row d-flex justify-content-center" style="height:100%;background-color: #f8f9fa;">Dias da semana</div>
-                <div class="row d-flex justify-content-center" style="height:100%;background-color: #ffadad;">Segunda</div>
-                <div class="row d-flex justify-content-center" style="height:100%;background-color: #ffd6a5;">Terça</div>
-                <div class="row d-flex justify-content-center" style="height:100%;background-color: #fdffb6;">Quarta</div>
-                <div class="row d-flex justify-content-center" style="height:100%;background-color: #caffbf;">Quinta</div>
-                <div class="row d-flex justify-content-center" style="height:100%;background-color: #9bf6ff;">Sexta</div>
-                <div class="row d-flex justify-content-center" style="height:100%;background-color: #a0c4ff;">Sábado</div>
-                <div class="row d-flex justify-content-center" style="height:100%;background-color: #bdb2ff;">Domingo</div>
-            </div>
+            <!-- <div class="row" style="height: 100px; background-color: rgb(100, 198, 255);">
+                Colocar alguma informação aqui
+            </div> -->
+
+        </div> 
+
+        <!-- Dias da semana -->
+        <div class="col-lg-2  d-flex flex-lg-column" style="color: #fff;">
+            <div class="row d-none d-lg-flex w-100 p-0 justify-content-center" style="height:100%;background-color: rgb(39, 188, 247);font-size: 20px;">Dias da <span style="font-weight: 900;">Semana</span></div>
+            <div class="row d-flex w-100 justify-content-center align-items-center dia-semana" id="1" style="height:100%;background-color: rgb(39, 188, 247);">Seg</div>
+            <div class="row d-flex w-100 justify-content-center align-items-center dia-semana" id="2" style="height:100%;background-color: rgb(39, 188, 247);">Ter</div>
+            <div class="row d-flex w-100 justify-content-center align-items-center dia-semana" id="3" style="height:100%;background-color: rgb(39, 188, 247);">Qua</div>
+            <div class="row d-flex w-100 justify-content-center align-items-center dia-semana" id="4" style="height:100%;background-color: rgb(39, 188, 247);">Qui</div>
+            <div class="row d-flex w-100 justify-content-center align-items-center dia-semana" id="5" style="height:100%;background-color: rgb(39, 188, 247);">Sex</div>
+            <div class="row d-flex w-100 justify-content-center align-items-center dia-semana" id="6" style="height:100%;background-color: rgb(39, 188, 247);">Sáb</div>
+            <div class="row d-flex w-100 justify-content-center align-items-center dia-semana" id="0" style="height:100%;background-color: rgb(39, 188, 247);">Dom</div>
+        </div>
+
+
+
+
+
+
+
+
         </div>
     </div>
 
