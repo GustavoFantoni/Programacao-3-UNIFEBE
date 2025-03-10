@@ -10,7 +10,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
 
-
 </head>
 <body class="d-flex justify-content-center align-items-center" style="background-color: #d1e3ff; min-height: 100vh; margin: 0;">
     
@@ -128,10 +127,24 @@
 
             </div>
 
-            <div class="row" style="height: 100px; background-color: rgb(100, 198, 255);">
-                sea level nivel do mar
-                grnd_level pressão atmosferica
+            <div class="d-flex flex-lg-row flex-column gap-2 justify-content-center align-items-center" style="margin-bottom: 20px;">
+                
+                <div class="col-5 d-flex flex-column justify-content-center align-items-center" style="background-color: #ffffff77; width: 200px; border-radius: 10px;">
+                    <i class="bi bi-speedometer" style="font-size: 30px; color: #fff;"></i>
+                    <p class="m-0" style="font-size: 20px; color: rgb(70, 70, 70);">Nível do mar</p>
+                    <p id="nvl_mar" style="font-size: 30px; color: #ffffff;font-weight: 600;">100</p>
+                </div>
+
+                <div class="col-5 d-flex flex-column justify-content-center align-items-center" style="background-color: #ffffff77; width: 200px; border-radius: 10px;">
+                    <i class="bi bi-tree" style="font-size: 30px; color: #fff;"></i>
+                    <p class="m-0" style="font-size: 20px; color: rgb(70, 70, 70);">Pressão atmosférica</p>
+                    <p id="pr_atm" style="font-size: 30px; color: #ffffff;font-weight: 600;">100</p>
+                </div>
             </div>
+
+            
+     
+
 
         </div> 
 

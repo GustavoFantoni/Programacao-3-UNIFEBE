@@ -106,6 +106,8 @@
         let umidade = document.getElementById("umidade");
         let min = document.getElementById("min");
         let max = document.getElementById("max");
+        let mar = document.getElementById("nvl_mar");
+        let atm = document.getElementById("pr_atm");
 
         clima.innerHTML = Math.round(objClima.main.temp) + "°"; 
         sensacao.innerHTML = "Sensação de " + Math.round(objClima.main.feels_like) + "°";
@@ -117,6 +119,8 @@
         umidade.innerHTML = objClima.main.humidity;
         min.innerHTML = Math.round(objClima.main.temp_min) + "°";
         max.innerHTML =  Math.round(objClima.main.temp_max) + "°";
+        mar.innerHTML = objClima.main.sea_level;
+        atm.innerHTML = objClima.main.grnd_level;
 
     }
 
