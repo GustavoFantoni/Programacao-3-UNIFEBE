@@ -23,11 +23,11 @@
                     manipulacao.carregarImagem();
                     manipulacao.converterEmTextura();
                 }
-
+            
                 function alterarConstrasteBrilho() {
                     let contraste = document.getElementById('contraste');
                     let brilho = document.getElementById('brilho');
-
+            
                     let m = new ManipulacaoImg();
                     m.carregarImagem();
                     m.converterEmTextura();
@@ -54,8 +54,15 @@
                     manipulacao.toDataUrl();
                 }
             
+                function aplicarPixelate() {
+                    if (!manipulacao.texture) prepararImagem();
+                    manipulacao.pixelate();
+                    manipulacao.toDataUrl();
+                }
+            
                 window.onload = prepararImagem;
             </script>
+            
             
 
     
@@ -72,6 +79,7 @@
                 <button type="button" class="btn btn-primary" onclick="aplicarInkFilter()">Ink Filter</button>
                 <button type="button" class="btn btn-primary" onclick="aplicarNoise()">Noise</button>
                 <button type="button" class="btn btn-primary" onclick="aplicarSepia()">Sepia</button>
+                <button type="button" class="btn btn-primary" onclick="aplicarPixelate()">Pixelate</button>
 
 
                 <br/><br/>

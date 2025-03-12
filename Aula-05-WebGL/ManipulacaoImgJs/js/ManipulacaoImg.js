@@ -29,15 +29,14 @@ class ManipulacaoImg {
 
     sepia() {
         this.canvas.draw(this.texture).sepia(1).update();
-
     }
 
     brilhoContraste(brilho, contraste) {
         this.canvas.draw(this.texture).brightnessContrast(brilho, contraste).update();
     }
 
-    contraste() {
-
+    pixelate() {
+        this.canvas.draw(this.texture).hexagonalPixelate(this.canvas.width / 2, this.canvas.height / 2, 10).update();
     }
 
     atualizarCanvas() {
@@ -48,5 +47,4 @@ class ManipulacaoImg {
     toDataUrl() {
         this.image.src = this.canvas.toDataURL('image/png');
     }
-
 }

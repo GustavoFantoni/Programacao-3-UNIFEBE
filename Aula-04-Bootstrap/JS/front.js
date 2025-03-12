@@ -15,9 +15,9 @@ function verificarTela() {
             buttonOpenMap.classList.add("openMap");
             buttonOpenMap.style.cssText = `
                 position: fixed;
-                bottom: 55px;
+                bottom: 50px;
                 right: 10px;
-                background-color: blue;
+                background-color: rgb(50 114 218 / 72%);
                 color: white;
                 border-radius: 10px;
                 width: fit-content;
@@ -38,7 +38,7 @@ function verificarTela() {
                 if (areaMapa.classList.contains("d-none")) {
                     areaMapa.classList.remove("d-none");
                     areaMapa.style.cssText = `
-                        position: absolute;
+                        position: fixed;
                         height: 98vh;
                         width: 98vw;
                         bottom: 1vh;
