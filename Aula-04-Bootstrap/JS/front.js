@@ -15,7 +15,7 @@ function verificarTela() {
             buttonOpenMap.classList.add("openMap");
             buttonOpenMap.style.cssText = `
                 position: fixed;
-                bottom: 50px;
+                bottom: 10px;
                 right: 10px;
                 background-color: rgb(50 114 218 / 72%);
                 color: white;
