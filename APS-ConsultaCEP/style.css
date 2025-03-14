@@ -1,0 +1,33 @@
+body {
+    background-image: url(backgrounds/stacked-waves-haikei.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1366px) {
+    body {
+        background-image: url(backgrounds/stacked-waves-haikei\ \(1\).svg); 
+        background-position: center top;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        background-image: url(backgrounds/stacked-waves-haikei\ \(2\).svg); 
+        background-position: center top;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        background-image: url(backgrounds/stacked-waves-haikei\ \(3\).svg); 
+        background-position: top center;
+        background-size: cover;
+    }
+}
+
