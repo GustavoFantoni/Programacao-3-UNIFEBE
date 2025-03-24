@@ -1,17 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
     let areaHistorico = document.getElementById("container-history");
     let expandir = document.getElementById("expand");
-
+    
     function ajustaAltura() {
     
         if (window.screen.height < 680) {
             expandir.style.display = "none";
         } else {
             expandir.style.display = "initial";
-        }
-        
-        function isExpanded() {
-            return areaHistorico.offsetHeight > 90;
         }
 
         if (window.screen.width < 768) {
@@ -33,5 +29,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addEventListener("resize", function() {
         ajustaAltura();
-    });
+    });  
 });
