@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (window.screen.width < 768) {
             areaHistorico.style.height = areaHistorico.style.height === "calc(100vh - 500px)" ? "calc(100vh - 440px)" : "90px"; 
         } else {
-            areaHistorico.style.height = "calc(100vh - 200px)";
+            areaHistorico.style.maxHeight = "calc(100vh - 200px)";
         }
     }
    
